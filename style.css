@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+:root{
+    /* variables can be used globally...and variables are custom*/
+    --g:green;
+    --black: black;
+    --box-sizing: 0 .2rem 1rem rgb(108, 196, 108);
+    --shadow:0 .2rem 1rem hsl(0, 0%, 40%);
+    --border: 2rem solid rgb(108, 196, 108);
+    --outline: .1rem solid hsl(0, 0%, 40%);
+}
+section{
+    padding:2rem 9%;
+}
+html{
+    font-size: 85%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+body{
+    background-color: hsl(0, 0%, 90%);
+}
+section{
+    padding: 2rem 9%;
+}
+/* Header section */
+.head a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+}
+.head{
+    background-color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 9%;
+    box-shadow: var(--box-sizing);
+}
+.head a.stylee{
+    font-size: 2.5rem;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+.stylee span{
+    font-size: 2rem;
+    font-family: "Playwrite CU", cursive;
+    color: tomato;
+}
+.head #container a{
+    font-size: 1rem;
+    margin:0 .7rem;
+    color: black;
+}
+.head #container a:hover{
+    color: green;
+    padding: 7px;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 15px;
+}
+.icons div{
+    border:0px solid black;
+    height:2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color:  hsl(0, 0%, 90%);
+    cursor: pointer;
+}
+.icons div:hover{
+    background-color:  hsl(0, 0%, 70%);
+    color: white;
+}
+#menu{
+    display:none;
+}
+.head #container.active{
+    right: 2rem;
+    transition: .4s;
+}
+.searchh{
+    border: 1px solid;
+    border: none;
+    position: absolute;
+    top: 110%;
+    height: 2rem;
+    right: -110%;
+    box-shadow: var(--shadow);
+}
+.searchh.active{
+    right: 2rem;
+    transition: .4s;
+}
+.searchh input[type="search"]
+{
+    height: 27px; 
+    padding-left: 20px; 
+    width:20rem;
+    border: none; 
+    outline: none; 
+    border-radius: 4px;
+}
+.searchh label:hover{
+    color: blue;
+}
+.shop-cart{
+    border: 1px solid;
+    position: absolute;
+    top:110%;
+    right: -110%;
+    border-radius: 4px;
+    padding: 1rem;
+    width:20rem;
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+.shop-cart.active{
+    right: 2rem;
+    transition: .4s;
+}
+.shop-cart .box{
+    border: 0px solid;
+    margin:0px;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    padding-right: 3rem;
+}
+.shop-cart .box img{
+    height: 7rem;
+    width: 7rem;
+}
+.shop-cart .box .fa-trash{
+    position: absolute;
+    padding-left: 1rem;
+    right: 2rem;
+    cursor: pointer;
+}
+.shop-cart .box .fa-trash:hover{
+    color:white;
+    padding:.5rem;
+    background-color: hsl(0, 0%, 40%);
+    border-radius: 50%;
+    border: none;
+}
+.shop-cart .total{
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.shop-cart .btn{
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 1px solid;
+    padding: .5rem;
+    display: block;
+    text-align: center;
+    color: black;
+    border-radius: 4px;
+}
+.shop-cart .btn:hover{
+    color:white;
+    background-color: green;
+}
+.login-form{
+    position: absolute;
+    top:110%;
+    right: -110%;
+    width:15rem;
+    padding:1.5rem;
+    background-color: white;
+   box-shadow: var(--shadow);
+   border-radius: 4px;
+   text-align: center;
+}
+.login-form .in{
+    margin-bottom: 15px;
+}
+.login-form .in input{
+    padding: 6px;
+    background-color: hsl(0, 0%, 90%);
+    border: none;
+    border-radius: .5rem;
+}
+.login-form.active{
+    right: 2rem;
+    transition: .4s;
+}
+.login-form .box{
+    background-color: hsl(0, 0%, 70%);
+    margin:.2rem 0;
+    border: none;
+    border-radius: 4px;
+    padding: 5rem;
+    width:100%;
+}
+.login-form p{
+    margin-top: .5rem;
+    font-size: 1rem;
+    line-height: 1;
+}
+.login-form a{
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+.login-form a:hover{
+    color: red;
+}
+.login-form .btn{
+    margin-bottom: 1.5rem;
+    padding: .3rem 1.2rem;
+    border-radius: 4px;
+    border: 1px solid;
+}
+.login-form .btn:hover{
+    background-color: green;
+    color: white;
+    border: none;
+}
+.homepage{
+    display: flex;
+    justify-content: center;
+    top:120%;
+    right:0;
+    background: url("../image/banner-img.jpg") no-repeat center center;
+    background-position: center;
+    background-size: cover;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+.homepage .content{
+    width:50rem;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.homepage .content span{
+    font-family: "Dancing Script", cursive;
+    color: red;
+    font-weight: bold;
+}
+.homepage .content h2{
+    color: hsl(120, 66%, 20%);
+}
+.homepage .content p{
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+.homepage .content .btn{
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 0.3rem .5rem;
+    color: black;
+    border-radius: 4px;
+    background-color: hsl(0, 0%, 70%);
+}
+.homepage .content .btn:hover{
+    color:white;
+    background-color: green;
+    border: none;
+}
+.heading{
+    font-size: 3rem;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin-top: .5rem;
+}
+.heading span{
+    background-color: green;
+    color: white;
+    padding: .5rem 1.5rem;
+    display: inline-block;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0% 0%);
+}
+/* Header section */
+/* Features section */
+.features .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem,1fr));
+    gap:1.5rem;
+}
+.features .box-container .box{
+    padding:2rem 1.5rem;
+    background-color: white;
+    outline:var(--outline);
+    outline-offset: -.7rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-radius: .2rem;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.features .box-container .box:hover{
+    box-shadow: 1px 1px 5px 2px var(--g);
+}
+.features .box-container .box img{
+    margin:.5rem 0;
+    height:10rem;
+}
+.features .box-container .box h3{
+    line-height: 1.8;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.features .box-container .box p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.features .box-container .box .btn{
+    padding:.2rem .7rem;
+    font-size: 1.2rem;
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: hsl(0, 0%, 80%);
+}
+.btn
+{
+    padding:.2rem .7rem;
+    font-size: 1.2rem;
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: hsl(0, 0%, 80%);
+}
+.features .box-container .box .btn:hover{
+    background-color: green;
+    border: none;
+    color: #ffffff;
+}
+/* Features section */
+/* Products section */
+.products .product-slider{
+    padding:1rem;
+}
+.products .product-slider:first-child{
+    margin: .5rem;
+}
+.products .product-slider .box{
+    background-color: white;
+    border-radius: .2rem;
+    text-align: center;
+    padding: 1rem 1rem;
+    outline:var(--outline);
+    outline-offset: -.6rem;
+    box-shadow: var(--shadow);
+    font-family: "Roboto Condensed", sans-serif;
+    max-width: 279px; 
+}
+.products .product-slider .box:hover{
+    box-shadow: 1px 1px 5px 2px var(--g);
+}
+.products .product-slider .box .btn{
+    margin:1rem;
+}
+.products .product-slider .box .btn:hover{
+    background-color: green;
+    border: none;
+    color: #ffffff;
+}
+.products .product-slider .box img{
+    margin:0;
+    height:15rem;
+}
+.products .product-slider .box h3{
+    margin-top: 5px;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.products .product-slider .box .price{
+    font-size: 1.5rem;
+    padding:.5rem;
+}
+.products .product-slider .box .stars i{
+    color:orange;
+    font-size: 1.5rem;
+    padding-bottom: .7rem;
+}
+/* Products section */
+/* Categories section */
+.categories .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
+    gap:1.5rem;
+}
+.categories .box-container .box{
+    padding:3rem 0rem;
+    background-color: white;
+    outline:var(--outline);
+    outline-offset: -.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-radius: .2rem;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.categories .box-container .box img{
+    margin:.5rem 0;
+    height:10rem;
+}
+.categories .box-container .box h3{
+    line-height: 1.8;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.categories .box-container .box p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.categories .box-container .box .btn:hover{
+    background-color: green;
+    border: none;
+    color: #ffffff;
+}
+.categories .box-container .box:hover{
+    box-shadow: 1px 1px 5px 2px var(--g);
+}
+/* Categories section */
+/* Review section */
+.review .review-slider{
+    padding: 1rem;
+}
+.review .review-slider .box{
+    background-color: white;
+    border-radius: .2rem;
+    text-align: center;
+    padding: 1rem 1rem;
+    outline:var(--outline);
+    outline-offset: -.6rem;
+    box-shadow: var(--shadow);
+    font-family: "Roboto Condensed", sans-serif;
+    max-width: 279px;
+}
+.review .review-slider .box:hover{
+    box-shadow: 1px 1px 5px 2px var(--g);
+}
+.review .review-slider .box img{
+    height:8rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+.review .review-slider .box p{
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+.review .review-slider .box h3{
+    font-size: 2rem;
+}
+.review .review-slider .box .stars i{
+    color: orange;
+    font-size: 1.5rem;
+    padding-bottom: .7rem;
+}
+/* Review section */
+/* blogs section */
+.blogs .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(14rem,1fr));
+    gap:1.5rem;
+}
+.blogs .box-container .box{
+    overflow: hidden;
+    background-color: white;
+    box-shadow: var(--shadow);
+    border-radius: .2rem;
+    text-align: center;
+}
+.blogs .box-container .box img{
+    height:18rem;
+    width: 100%;
+}
+.blogs .box-container .box .content{
+    padding: 1rem;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.blogs .box-container .box .content .icons{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .1rem solid hsl(0, 0%, 70%);
+}
+.blogs .box-container .box .content .icons a{
+    font-size: 1.2rem;
+}
+.blogs .box-container .box .content .icons a i{
+    padding-right: 1rem;
+    color: green;
+}
+.blogs .box-container .box .content .icons a i:hover{
+    color: black;
+}
+.blogs .box-container .box .content h3{
+    font-size: 1.8rem;
+    line-height: 1.5;
+    padding:.2rem 0;
+}
+.blogs .box-container .box .content p{
+    font-size: 1.2rem;
+    line-height:1.5;
+    padding:0;
+}
+.blogs .box-container .box:hover{
+    box-shadow: 1px 1px 5px 2px var(--g);
+}
+.blogs .box-container .box .btn:hover{
+    background-color: green;
+    border: none;
+    color: #ffffff;
+}
+/* blogs section */
+
+/* footer section */
+.footer{
+    background-color: white;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.footer .box-container
+{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(14rem,1fr));
+    gap:2rem;
+}
+.footer .box-container .box h3{
+    font-size: 2rem;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.footer .box-container .box h3 i{
+    color: green;
+}
+.footer .box-container .box .links{
+    font-size: 1.2rem;
+    display: block;
+    padding: .7rem 0;
+    color: black;
+    text-decoration: none;
+}
+.footer .box-container .box .links i{
+    padding-right: 1rem;
+    color: green;
+}
+.footer .box-container .box .links:hover i{ 
+    padding-right: 2rem;
+    /* what it means is when hover over <a> elements..for i padding applied */
+}
+.footer .box-container .box p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+.footer .box-container .box .share a{
+    border: 1px solid;
+    font-size: 2rem;
+    border-radius: .5rem;
+    background-color: hsl(0, 0%, 90%);
+    margin-right: .5rem;
+}
+.footer .box-container .box .share a i{
+    color:black;
+    height:4rem;
+    width: 2.5rem;
+    text-align: center;
+}
+.footer .box-container .box .share a:hover{
+    background-color: green;
+    color: #ffffff;
+    border-radius: .5rem;
+}
+.footer .box-container .box .email{
+    margin-top:0;
+    margin-bottom: 2rem;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: hsl(0, 0%, 90%);
+    padding-left:.5rem;
+}
+.footer .box-container .box .payment{
+    margin-top: 2rem;
+}
+.footer .box-container .box .btn:hover{
+    background-color: green;
+    border: none;
+    color: #ffffff;
+}
+.footer .credit{
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    font-size: 2rem;
+    border-top: .1rem solid hsl(0, 0%, 70%);
+}
+.footer .credit span{
+    font-family: "Dancing Script", cursive;
+    color: red;
+    font-weight: bold;
+}
+/* footer section */
+
+
+
+
+
+/* media queries */
+@media (max-width:991px)
+{
+    html{
+    font-size:55%;
+    }
+    .searchh input[type="search"]
+   {
+    height: 17px; 
+   }
+   section{
+    padding: 2rem;
+   }
+   .login-form{
+    width:15rem;
+   }
+}
+@media (max-width:600px)
+{
+    #menu{
+        display:inline-block;
+    }
+    .head #container{
+        position: absolute;
+        top:110%;
+        right: -110%;
+        width: 20rem;
+        box-shadow: var(--shadow);
+        border-radius: .5rem;
+        background-color: white;
+    }
+    .head #container a{
+        font-size: 1.5rem;
+        margin: 2rem 2rem;
+        display:block;
+    }
+    .heading{
+        font-size: 2.5rem;
+    }
+    .login-form input{
+        padding: 3px;
+       }
+}
+@media (max-width:991px){
+    html{
+        font-size: 50;
+    }
+    .homepage{
+        text-align: center;
+    }
+    .footer{
+        text-align: center;
+    }
+}
+
+
